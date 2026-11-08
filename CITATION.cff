@@ -27,6 +27,6 @@ abstract: >-
   A Lean 4 proof that Certifaiger's safety checks imply safety (constraints, reset
   functions that read inputs and latches, uninitialized latches, and the reset side
   condition of Certifaiger 10.3.0), including that Certifaiger's own Transition formula
-  implies the mechanized one; a reference checker (kcheck) whose verdicts are proved to
-  imply safety; and a pre-registered conformance study comparing it with Certifaiger,
+  implies the mechanized one; a reference checker (kcheck) whose acceptances are proved to
+  imply safety, for circuits small enough to enumerate; and a pre-registered conformance study comparing it with Certifaiger,
   Valaig and an explicit-state ground truth.

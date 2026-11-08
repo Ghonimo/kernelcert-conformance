@@ -24,4 +24,6 @@ Rerunning the study needs Linux, podman (for rIC3), and the tools built by
 `study/p6_all_models.sh`) run on the same host; their outputs are in `study/results/`,
 described in `study/results/README.md`. Certifaiger's test pairs in
 `study/corpus/certifaiger_tests/` are Certifaiger's own (MIT license, included).
-License: Apache-2.0. Cite via CITATION.cff.
+License: Apache-2.0. Cite via CITATION.cff. Archived on Zenodo: version 1.0.0, the one
+the paper describes, at https://doi.org/10.5281/zenodo.24063635; the newest version at
+https://doi.org/10.5281/zenodo.24063634.
