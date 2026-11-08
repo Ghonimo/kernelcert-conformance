@@ -58,4 +58,7 @@ defect is present in the latest release. Smallest case in the corpus: `m0048_ric
 a copy of the rIC3 certificate `m0048_ric3` (accepted) with its gates renumbered so that
 gate 6 reads gate 8 (killed after 2.7 s).
 
-**Maintainers.** To be told before publication; their answer will be recorded here.
+**Maintainers.** Told on 2026-11-07 in Certifaiger's issue tracker:
+https://github.com/Froleyks/certifaiger/issues/10 (this finding) and
+https://github.com/Froleyks/certifaiger/issues/11 (whether the differences D1 and D3 are
+intended). Their answers will be recorded here.
