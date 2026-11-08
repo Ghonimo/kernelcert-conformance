@@ -1,0 +1,10 @@
+aag 3 0 2 0 1 1
+2 2 6
+4 4
+2
+6 2 4
+l0 = 2
+c
+Shared latch k (= model latch m) resets to k AND p, a reset that reads itself and the
+private latch p; p resets low. Stratified only when mapped latches are exempt
+(Certifaiger >= 10.3.0).

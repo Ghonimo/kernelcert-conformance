@@ -1,0 +1,8 @@
+aag 3 0 2 0 1 0 1
+2 3
+4 0
+7
+6 2 4
+l0 = 2
+c
+k (= model m) toggles; private p resets low, stays low; constraint NOT(k AND p).

@@ -1,0 +1,11 @@
+#!/bin/bash
+# Reference checker, end to end:  kc MODEL WITNESS [--budget=E]
+# Prints one JSON verdict line. Exit: 0 accept, 1 reject, 2 refused (out of scope or
+# unreadable input), 3 internal failure.
+here="$(cd "$(dirname "$0")" && pwd)"
+kcheck="$here/../formalization/.lake/build/bin/kcheck"
+tmp="$(mktemp -t kc.XXXXXX)" || exit 3
+trap 'rm -f "$tmp"' EXIT
+python3 -I "$here/front.py" "$@" > "$tmp"; rc=$?
+if [ $rc -ne 0 ]; then cat "$tmp"; exit $rc; fi
+"$kcheck" "$tmp"

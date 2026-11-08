@@ -1,0 +1,3 @@
+{"model": {"nI":0,"nL":1,"maxVar":1,"latchNext":[2],"latchReset":[0],"ands":[],"bad":[2],"cons":[]},
+ "witness": {"nI":0,"nL":1,"maxVar":1,"latchNext":[2],"latchReset":[0],"ands":[],"bad":[2],"cons":[]},
+ "latchPairs": [[0,5]], "inputPairs": []}

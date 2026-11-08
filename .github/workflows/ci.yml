@@ -1,0 +1,54 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  lean:
+    name: Lean development, kcheck, front end and ground truth
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install elan
+        run: |
+          curl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh \
+            | sh -s -- -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+
+      - name: Build (fail on any warning, including 'declaration uses sorry')
+        working-directory: formalization
+        run: |
+          set -o pipefail
+          lake build 2>&1 | tee build.out
+          ! grep -q "warning" build.out
+
+      - name: Axiom audit (report ran on the cited theorems, no sorryAx)
+        working-directory: formalization
+        run: |
+          set -o pipefail
+          lake env lean AxiomsReport.lean | tee axioms.out
+          for t in witness_sound witness_sound_K check_sound transCheckCF_implies_transCheckK \
+                   witness_sound_CF reset_exists toy5_safe_K toy6_safe_K; do
+            grep -q "$t" axioms.out
+          done
+          ! grep -q "sorryAx" axioms.out
+
+      - name: Lean tests
+        working-directory: formalization
+        run: |
+          for t in tests/*.lean; do lake env lean "$t"; done
+
+      - name: kcheck on fixtures
+        working-directory: formalization
+        run: bash tests/kcheck_test.sh
+
+      - name: Front end and ground truth
+        run: |
+          python3 -I checker/test_front.py
+          python3 -I study/tools/test_bfs.py

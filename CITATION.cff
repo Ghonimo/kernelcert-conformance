@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: >-
+  If you use this software or data, please cite it as below. A paper describing it is
+  under submission; this entry will be updated on publication.
+title: >-
+  KernelCert: a Lean reference for Certifaiger's hardware model-checking certificate
+  checks, a reference checker compiled from it, and a conformance study
+type: software
+authors:
+  - family-names: Ghonim
+    given-names: Mohamed
+    affiliation: Portland State University
+    orcid: https://orcid.org/0009-0002-8311-059X
+  - family-names: Song
+    given-names: Xiaoyu
+    affiliation: Portland State University
+repository-code: https://github.com/Ghonimo/kernelcert-conformance
+license: Apache-2.0
+keywords:
+  - hardware model checking
+  - certificates
+  - witness circuits
+  - Certifaiger
+  - Lean 4
+  - differential testing
+abstract: >-
+  A Lean 4 proof that Certifaiger's safety checks imply safety (constraints, reset
+  functions that read inputs and latches, uninitialized latches, and the reset side
+  condition of Certifaiger 10.3.0), including that Certifaiger's own Transition formula
+  implies the mechanized one; a reference checker (kcheck) whose verdicts are proved to
+  imply safety; and a pre-registered conformance study comparing it with Certifaiger,
+  Valaig and an explicit-state ground truth.

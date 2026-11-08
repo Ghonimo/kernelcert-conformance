@@ -1,0 +1,15 @@
+[2026-11-04 12:57:41] repo commit 0bd91c2afa523a0956765628ce828a0b896c8828
+b1e1bf4f3b198aeb2bdd9f3320c6342ae6c2f7cf6d3486a7b20903683ef817ee  /u/ghonim/research/certcheck/tools/bin/kcheck
+10202d77c53e3529549fcf7367a99b982dd8a1aa1b31007d720ec5d797b1cafd  /u/ghonim/research/certcheck/tools/bin/valaigcert
+57f2347e3f87e78b0432df220fd2e76067b72987213561e82d371515a6d85d91  /u/ghonim/research/certcheck/tools/bin/cadical
+aa77244ba72d8eab16b69208707788b07f25c943736aad2f292f129704759441  /u/ghonim/research/certcheck/tools/certifaiger-10.2.1/bin/certifaiger
+f27b6dc0199334f5311de379158a7ef8fcbcaf7943ed4f91219b33887376e96f  /u/ghonim/research/certcheck/tools/certifaiger-current-assert/bin/certifaiger
+a3bf4f3ad6ac2a0c14d49fd72e8290de44d937545e591472905e528b6823c42c  /u/ghonim/research/certcheck/tools/certifaiger-current/bin/certifaiger
+[2026-11-04 12:57:43] stage1
+[2026-11-04 12:58:01] rIC3
+rIC3: 300 models, 120 certificates
+[2026-11-04 12:58:53] stage3
+[2026-11-04 12:58:55] pairs: 7613 generated + fixed
+7613 pairs in 613 s -> /u/ghonim/research/certcheck/counted/results.csv
+16 pairs in 8 s -> /u/ghonim/research/certcheck/counted/results_fixed.csv
+[2026-11-04 13:10:41] done

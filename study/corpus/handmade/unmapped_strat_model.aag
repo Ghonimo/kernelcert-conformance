@@ -1,0 +1,5 @@
+aag 1 0 1 0 0 1
+2 2
+2
+c
+One latch m, reset low, holds its value; bad = m. Safe.
